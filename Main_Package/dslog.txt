@@ -1,5 +1,5 @@
 Log-file of program ./dymosim
-(generated: Sat Feb 08 20:38:32 2020)
+(generated: Sat Feb 08 21:20:03 2020)
 
 dymosim started
 ... "dsin.txt" loading (dymosim input file)
@@ -14,22 +14,131 @@ Manual Transmission, Gearset, Break Loop
 
 Integration started at T = 0 using integration method DASSL
 (DAE multi-step solver (dassl/dasslrt of Petzold modified by Dassault Systemes))
-Integration terminated successfully at T = 1
-   CPU-time for integration                : 2.91 seconds
-   CPU-time for one grid interval          : 5.82 milliseconds
-   CPU-time for initialization             : 0.05 seconds
-   Number of result points                 : 504
-   Number of grid points                   : 501
-   Number of accepted steps                : 120
-   Number of f-evaluations (dynamics)      : 271
-   Number of crossing function evaluations : 633
-   Number of Jacobian-evaluations          : 50
+Error: The following error was detected at time: 0.8480647421926796
+  
+Singular position of loop (either no or two analytic solutions;
+the mechanism has lost one-degree-of freedom in this position).
+Try first to use another Modelica.Mechanics.MultiBody.Joints.Assemblies.JointXXX component.
+In most cases it is best that the joints outside of the JointXXX
+component are revolute and NOT prismatic joints. If this also
+lead to singular positions, it could be that this ki
+  Failed condition: vehicle.frontAxle.leftLinkage.upright.outerJoints.steeringPivot.k1a > 1E-10
+
+Integration terminated before reaching "StopTime" at T = 0.848
+States and derivatives:
+vehicle.driverEnvironment.brakePedalConverter.position.s=0.041705 -0.309496
+vehicle.driverEnvironment.brakePedalConverter.position.v=-0.309496 -0.386391
+vehicle.driverEnvironment.steeringConverter.position.phi=-4.02835 -1.06448
+vehicle.driverEnvironment.steeringConverter.position.w=-1.06448 7.5125
+vehicle.driverEnvironment.clutchPedalConverter.position.s=0 0
+vehicle.driverEnvironment.clutchPedalConverter.position.v=0 0
+vehicle.brakes.brake_1.torqueReaction.flange_b.phi=0.0536167 0.0521734
+vehicle.brakes.brake_1.brake.friction.z=-0.000100606 3.79852e-006
+vehicle.brakes.brake_2.torqueReaction.flange_b.phi=-0.00755031 0.0525329
+vehicle.brakes.brake_2.brake.friction.z=-0.000139639 0.00086872
+vehicle.brakes.brake_3.torqueReaction.flange_b.phi=0.0254283 -0.0111418
+vehicle.brakes.brake_3.brake.friction.z=-0.005 -0
+vehicle.brakes.brake_4.torqueReaction.flange_b.phi=-0.0400918 -0.00348789
+vehicle.brakes.brake_4.brake.friction.z=-0.005 -0
+vehicle.frontAxle.leftLinkage.upright.upright.hubBearing_2.mounting1D.flange_b.phi=0.0536167 0.0521734
+vehicle.frontAxle.leftLinkage.lowerControlArmMounts.joint_1.motion.phi=0.154525 0.259543
+vehicle.frontAxle.leftLinkage.lowerControlArmMounts.joint_1.motion.w=0.259543 6.15257
+vehicle.frontAxle.rightLinkage.upright.upright.hubBearing_2.mounting1D.flange_b.phi=-0.00755031 0.0525329
+vehicle.frontAxle.rightLinkage.lowerControlArmMounts.joint_1.motion.phi=-0.167562 -0.241591
+vehicle.frontAxle.rightLinkage.lowerControlArmMounts.joint_1.motion.w=-0.241591 0.906823
+vehicle.rearAxle.leftLinkage.upright.upright.hubBearing_2.mounting1D.flange_b.phi=0.0254283 -0.0111418
+vehicle.rearAxle.leftLinkage.lowerControlArmMounts.joint_1.motion.phi=0.0162254 0.0289071
+vehicle.rearAxle.leftLinkage.lowerControlArmMounts.joint_1.motion.w=0.0289071 -0.0777159
+vehicle.rearAxle.rightLinkage.upright.upright.hubBearing_2.mounting1D.flange_b.phi=-0.0400918 -0.00348789
+vehicle.rearAxle.rightLinkage.lowerControlArmMounts.joint_1.motion.phi=0.00869748 0.0127529
+vehicle.rearAxle.rightLinkage.lowerControlArmMounts.joint_1.motion.w=0.0127529 0.251573
+vehicle.wheel_1.rim.mass.phi=2.36663 0.0521696
+vehicle.wheel_1.rim.mass.w=0.0521696 0.1645
+vehicle.wheel_1.tyreForces.slipForces.slipCalculation.u=-0.141967 -0.0476998
+vehicle.wheel_1.tyreForces.slipForces.slipCalculation.v=-0.284401 -0.722977
+vehicle.wheel_2.rim.mass.phi=2.58418 0.0516761
+vehicle.wheel_2.rim.mass.w=0.0516761 0.736086
+vehicle.wheel_2.tyreForces.slipForces.slipCalculation.u=-0.0994084 0.00383867
+vehicle.wheel_2.tyreForces.slipForces.slipCalculation.v=0.226698 0.507218
+vehicle.wheel_3.rim.mass.phi=21.9579 12.7328
+vehicle.wheel_3.rim.mass.w=12.7328 -20.0852
+vehicle.wheel_3.tyreForces.slipForces.slipCalculation.u=-0.0133555 -0.0230214
+vehicle.wheel_3.tyreForces.slipForces.slipCalculation.v=-0.000841095 -0.00531773
+vehicle.wheel_4.rim.mass.phi=22.5099 16.7914
+vehicle.wheel_4.rim.mass.w=16.7914 -18.07
+vehicle.wheel_4.tyreForces.slipForces.slipCalculation.u=-0.0021283 0.0234894
+vehicle.wheel_4.tyreForces.slipForces.slipCalculation.v=0.00189144 0.00433606
+vehicle.motion.prismatic_x.s=5.90021 3.9274
+vehicle.motion.prismatic_x.v=3.9274 -7.01925
+vehicle.motion.prismatic_y.s=0.809576 1.41103
+vehicle.motion.prismatic_y.v=1.41103 1.41072
+vehicle.motion.prismatic_z.s=0.30984 0.079202
+vehicle.motion.prismatic_z.v=0.079202 0.0717869
+vehicle.motion.revolute_x.phi=0.00888669 0.0134224
+vehicle.motion.revolute_x.w=0.0134224 0.63133
+vehicle.motion.revolute_y.phi=-0.035882 -0.0517723
+vehicle.motion.revolute_y.w=-0.0517723 -0.0805657
+vehicle.motion.revolute_z.phi=0.206545 0.411822
+vehicle.motion.revolute_z.w=0.411822 1.02365
+vehicle.engine.starterMotor.filters.firstOrder.y=0 0
+vehicle.engine.starterMotor.mounting1D.flange_b.phi=0.0160672 0.03748
+vehicle.engine.flywheel.rotatingBody.phi=168.752 111.857
+vehicle.engine.flywheel.rotatingBody.w=111.857 -144.73
+vehicle.engine.friction.mounting1D.flange_b.phi=0.0160672 0.03748
+vehicle.engine.engineMaps.mounting1D.flange_b.phi=0.0160672 0.03748
+vehicle.transmission.clutch.clutchPlates.z=-0.0169833 0.135171
+vehicle.transmission.gearset.gearLosses.tauLoss=1.75125 -3.50942
+vehicle.transmission.gearset.variator.ratio_s=2.53 0
+vehicle.transmission.gearset.inputShaft.phi=168.73 111.987
+vehicle.transmission.gearset.inputShaft.w=111.987 -145.878
+vehicle.transmission.gearset.kinematicClutch_ZeroGearDisconnect.phi_rel=-1.35807e-009 -2.04304e-009
+vehicle.transmission.gearset.kinematicClutch_ZeroGearDisconnect.w_rel=-2.04304e-009 1.42109e-013
+vehicle.transmission.gearset.mounting1D.flange_b.phi=0.0160672 0.03748
+vehicle.engineController.idleSpeedControl.timer_AccelTime.absolute=0 0
+vehicle.engineController.idleSpeedControl.timer_AccelTime.baseline=0 0
+vehicle.engineController.idleSpeedControl.toggle_IdleSpeed.timer.absolute=0 0
+vehicle.engineController.idleSpeedControl.toggle_IdleSpeed.timer.baseline=0 0
+vehicle.engineController.idleSpeedControl.toggle_IdleSpeed.timer1.absolute=0.848065 1
+vehicle.engineController.idleSpeedControl.toggle_IdleSpeed.timer1.baseline=0 0
+vehicle.engineController.revLimiter.toggle_fuelCut.timer.absolute=0 0
+vehicle.engineController.revLimiter.toggle_fuelCut.timer.baseline=0 0
+vehicle.engineController.revLimiter.toggle_fuelCut.timer1.absolute=0.848065 1
+vehicle.engineController.revLimiter.toggle_fuelCut.timer1.baseline=0 0
+vehicle.engineController.fuelling.timer_FuelCutTime.absolute=0.848065 1
+vehicle.engineController.fuelling.timer_FuelCutTime.baseline=0 0
+vehicle.engineController.throttleDemand.throttleFilter.firstOrder.y=0 0
+driver.longitudinalControl.accelBrakeDistribution.limIntegrator.y_int=1.00002 0
+driver.lateralControl.headingPID[1].derivative.x=0.238675 0.358392
+driver.lateralControl.headingPID[2].derivative.x=0.355781 0.377114
+driver.lateralControl.headingPID[3].derivative.x=0.516583 0.512439
+driver.lateralControl.headingPID[4].derivative.x=0.689736 0.631295
+vehicle.engineController.idleSpeedControl.PID_IdleThrottleDemand.I.y=400.861 -983.118
+vehicle.engineController.idleSpeedControl.PID_IdleThrottleDemand.D.x=-1082.99 1483.57
+driver.longitudinalControl.controller.currentPID.derivative.x=-0.579191 5.8836
+driver.longitudinalControl.controller.currentPID.integral.uInt=-2.54395 1.33756
+driver.longitudinalControl.controller.currentPID.integral.filtered=0 -0
+driver.longitudinalControl.controller.currentPID.integral.latchOut=0 -0
+driver.longitudinalControl.controller.LookAheadPID[1].integral.uInt=-0.423992 0.222927
+driver.longitudinalControl.controller.LookAheadPID[1].integral.filtered=0 -0
+driver.longitudinalControl.controller.LookAheadPID[1].integral.latchOut=0 -0
+driver.longitudinalControl.controller.LookAheadPID[2].integral.uInt=-0.169597 0.0891709
+driver.longitudinalControl.controller.LookAheadPID[2].integral.filtered=0 -0
+driver.longitudinalControl.controller.LookAheadPID[2].integral.latchOut=0 -0
+   CPU-time for integration                : 9.01 seconds
+   CPU-time for one grid interval          : 10.6 milliseconds
+   CPU-time for initialization             : 0.044 seconds
+   Number of result points                 : 865
+   Number of grid points                   : 850
+   Number of accepted steps                : 326
+   Number of f-evaluations (dynamics)      : 701
+   Number of crossing function evaluations : 1243
+   Number of Jacobian-evaluations          : 195
    Number of model time events             : 0
    Number of input time events             : 0
-   Number of state events                  : 1
+   Number of state events                  : 8
    Number of step events                   : 0
-   Minimum integration stepsize            : 5e-007
-   Maximum integration stepsize            : 0.0655
+   Minimum integration stepsize            : 7.72e-009
+   Maximum integration stepsize            : 0.0188
    Maximum integration order               : 5
 Calling terminal section
 ... "dsfinal.txt" creating (final states)

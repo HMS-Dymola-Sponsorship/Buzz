@@ -109,8 +109,8 @@ DeclareVariable("road.radius", "Radius of road [m]", 7.625, 0.0,1E+100,0.0,0,513
 DeclareParameter("road.banking", "Bank angle of the circuit [rad|deg]", 9, 0, \
 0.0,0.0,0.0,0,560)
 DeclareParameter("road.constantVelocity", "Constant velocity test [:#(type=Boolean)]",\
- 10, false, 0.0,0.0,0.0,0,562)
-DeclareParameter("road.v_start", "Target start velocity [m/s]", 11, 10, 0.0,0.0,\
+ 10, true, 0.0,0.0,0.0,0,562)
+DeclareParameter("road.v_start", "Target start velocity [m/s]", 11, 5, 0.0,0.0,\
 0.0,0,560)
 DeclareParameter("road.startAccelerationAfter", "Distance to travel before starting to accelerate [m]",\
  12, 50, 0.0,1E+100,0.0,0,560)
